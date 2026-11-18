@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Download App | HireNFix</title>
+<meta name="description" content="Download HireNFix for Android.">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>window.HF_PAGE='download';</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap" style="padding-bottom:20px"><ol data-crumbs="Download App" style="grid-column:1/-1;position:relative"></ol></div>
+    <div class="wrap" style="padding-top:0">
+      <div>
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
+          <img src="assets/img/logo.webp" width="72" height="72" alt="HireNFix logo" style="border-radius:50%;box-shadow:var(--shadow)">
+          <div><div style="font-weight:800;font-size:1.6rem;letter-spacing:-.02em">HireNFix</div><span class="pill">Android app</span></div>
+        </div>
+        <h1 style="font-size:clamp(2.2rem,5vw,3.4rem)">Download HireNFix</h1>
+        <p class="lead">Find, hire and review trusted local service providers in Valenzuela City, from your phone. Made for Residents and Local Service Providers.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" data-dl href="#" id="dl-btn"><i data-i="download"></i> Download for Android</a>
+          <a class="btn btn-ghost btn-lg" href="installation.html"><i data-i="book-open"></i> Installation Guide</a>
+        </div>
+        <p id="dl-note" style="margin-top:14px;color:var(--muted);font-size:.9rem">The button opens the official access link from the HireNFix user manual.</p>
+      </div>
+      <div style="display:grid;gap:20px;position:relative">
+        <div class="card" style="display:grid;grid-template-columns:176px minmax(0,1fr);gap:22px;align-items:center">
+          <div class="qr-box" style="border:1px solid var(--line)"><span data-qr></span><small>Scan with your phone camera</small></div>
+          <div><h3 style="margin-bottom:6px">Scan to download</h3><p style="color:var(--muted);font-size:.94rem">Point your camera at the code to open the HireNFix download page on your phone.</p></div>
+        </div>
+        <div class="card">
+          <h3 style="margin-bottom:14px">App details</h3>
+          <dl class="specs" id="specs"></dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker"><i data-i="list-checks"></i> Before you download</span><h2>Get set up in a few minutes</h2></div>
+      <div class="grid g3">
+        <div class="card"><span class="ico"><i data-i="smartphone"></i></span><h3>Check your phone</h3><p>You need Android 8.0 or later, 2 GB of RAM and 300 MB of free storage.</p></div>
+        <div class="card"><span class="ico"><i data-i="download"></i></span><h3>Download and install</h3><p>Use the button or QR code, then select Install and wait for it to finish.</p><a class="card-link" href="installation.html">Installation guide <i data-i="arrow-right"></i></a></div>
+        <div class="card"><span class="ico"><i data-i="user-check"></i></span><h3>Register and verify</h3><p>Create an account and upload your documents. An Administrator verifies you.</p><a class="card-link" href="guides.html#res-registration">Registration steps <i data-i="arrow-right"></i></a></div>
+      </div>
+      <div class="callout" style="margin-top:28px"><i data-i="monitor"></i><div><b>Administrators:</b> the Admin Web System is opened in a desktop browser. There is nothing to install. See the <a href="guides.html#adm-access">Administrator guide</a>.</div></div>
+    </div>
+  </section>
+  <section class="section"><div class="wrap" data-contact></div></section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/components.js"></script>
+<script>
+(function(){
+  var C=window.HF_CONFIG;
+  function row(k,v,todo){return '<div><dt>'+k+'</dt><dd'+(todo?' class="todo"':'')+'>'+v+'</dd></div>';}
+  document.getElementById('specs').innerHTML=
+    row('Application version',C.appVersion||'To be provided',!C.appVersion)+
+    row('File size',C.fileSize||'To be provided',!C.fileSize)+
+    row('Minimum Android',C.minAndroid)+
+    row('Memory and storage',C.minRam+' RAM, '+C.minStorage);
+  if(!C.downloadUrl){document.getElementById('dl-note').textContent='The official download link has not been added yet.';}
+})();
+</script>
+</body>
+</html>

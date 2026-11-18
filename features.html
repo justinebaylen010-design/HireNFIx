@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>System Features | HireNFix</title>
+<meta name="description" content="Resident, Local Service Provider and Administrator features in HireNFix.">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>window.HF_PAGE='features';</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <ol data-crumbs="System Features"></ol>
+      <h1>System features</h1>
+      <p>What each role can do in HireNFix. Open any feature for its purpose and a link to the matching step-by-step guide.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:44px">
+    <div class="wrap" data-tabs data-tabs-hash>
+    <div class="feat-tools" role="search" aria-label="Search and filter features">
+      <div class="search-field"><label for="feat-search" class="sr-only">Search features</label><i data-i="search"></i><input id="feat-search" type="search" placeholder="Search features, for example payment or reviews" autocomplete="off"></div>
+      <div class="chips" id="feat-chips" role="group" aria-label="Filter by area">
+        <button type="button" class="chip" data-area="all" aria-pressed="true">All areas</button>
+        <button type="button" class="chip" data-area="account" aria-pressed="false">Account</button>
+        <button type="button" class="chip" data-area="booking" aria-pressed="false">Booking</button>
+        <button type="button" class="chip" data-area="messaging" aria-pressed="false">Messaging</button>
+        <button type="button" class="chip" data-area="payment" aria-pressed="false">Payments</button>
+        <button type="button" class="chip" data-area="assessment" aria-pressed="false">Assessment</button>
+        <button type="button" class="chip" data-area="feedback" aria-pressed="false">Feedback and disputes</button>
+      </div>
+      <p class="feat-count" id="feat-count" role="status" aria-live="polite"></p>
+    </div>
+      <div class="tabs" role="tablist" aria-label="Feature categories">
+        <button role="tab" id="tab-resident" aria-controls="panel-resident" aria-selected="true"><i data-i="house"></i> Resident</button>
+        <button role="tab" id="tab-provider" aria-controls="panel-provider" aria-selected="false" tabindex="-1"><i data-i="wrench"></i> Local Service Provider</button>
+        <button role="tab" id="tab-admin" aria-controls="panel-admin" aria-selected="false" tabindex="-1"><i data-i="user-cog"></i> Administrator</button>
+      </div>
+      <div role="tabpanel" id="panel-resident" aria-labelledby="tab-resident"><div class="grid g3" data-features="resident"></div></div>
+      <div role="tabpanel" id="panel-provider" aria-labelledby="tab-provider" hidden><div class="grid g3" data-features="provider"></div></div>
+      <div role="tabpanel" id="panel-admin" aria-labelledby="tab-admin" hidden><div class="grid g3" data-features="admin"></div></div>
+    </div>
+  </section>
+
+  <section class="section alt" id="areas">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker"><i data-i="layers"></i> By area</span><h2>Where the features fit together</h2><p>The same capabilities, grouped by what they help people do.</p></div>
+      <div class="grid g3">
+        <div class="card"><span class="ico"><i data-i="user"></i></span><h3>Account management</h3><p>Registration, ID and billing verification, Barangay Clearance, login and password recovery, role switching, and Administrator approval.</p></div>
+        <div class="card"><span class="ico"><i data-i="calendar"></i></span><h3>Service booking and management</h3><p>Job requests, applications, direct booking, service offers, contracts, a calendar and proof of service.</p></div>
+        <div class="card"><span class="ico"><i data-i="message-circle"></i></span><h3>Messaging and notifications</h3><p>Chats between Resident and Provider after acceptance, plus alerts for applications, bookings and restored tokens.</p></div>
+        <div class="card"><span class="ico"><i data-i="receipt"></i></span><h3>Payment and transaction management</h3><p>Agreed amounts in the contract, a digital receipt per deal and an Activity Ledger for Administrators.</p></div>
+        <div class="card"><span class="ico"><i data-i="badge-check"></i></span><h3>Assessment and verification</h3><p>SJT skill-level tags, the internal WIA, and Administrator review of documents and flagged accounts.</p></div>
+        <div class="card"><span class="ico"><i data-i="flag"></i></span><h3>Feedback, reviews and disputes</h3><p>Star ratings, written reviews, report types, token freezes, suspensions and an Account Health gauge.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dialog class="modal" id="feat-modal" aria-labelledby="m-title">
+  <button class="m-close" type="button" aria-label="Close" id="m-close"><i data-i="x"></i></button>
+  <div class="m-grid">
+    <div class="m-img" id="m-img"></div>
+    <div class="m-body">
+      <span class="pill" id="m-role"></span>
+      <h3 id="m-title"></h3>
+      <dl><div><dt>What it is</dt><dd id="m-desc"></dd></div><div><dt>Why it matters</dt><dd id="m-purpose"></dd></div></dl>
+      <div class="btn-row" style="margin-top:auto"><a class="btn btn-primary" id="m-link" href="guides.html">Open in user guide <i data-i="arrow-right"></i></a></div>
+    </div>
+  </div>
+</dialog>
+
+<footer id="site-footer"></footer>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/features.js"></script>
+</body>
+</html>
