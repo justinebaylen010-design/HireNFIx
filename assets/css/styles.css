@@ -143,10 +143,9 @@ ul,ol{margin:0;padding:0}
 .hero::before{content:"";position:absolute;right:-12%;top:-30%;width:62%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 40% 40%,var(--soft) 0,var(--soft-bg) 45%,transparent 70%);opacity:.75}
 .hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center;padding-block:clamp(40px,6vw,80px)}
 .hero h1{font-size:clamp(3rem,8vw,5.6rem);font-weight:800;letter-spacing:-.045em;line-height:.98}
-.hero h1 span{display:inline}
-.hero h1 .hire{color:#0EA4DD}
-.hero h1 b{color:#8B99A6;font-weight:800}
-.hero h1 .fix{color:#F8A335}
+.hero h1 span.brand-name{display:inline;color:var(--ink)}
+.hero h1 .brand-name b{font-weight:800}
+.hero h1 .brand-name .fix{display:inline;color:var(--accent-text)}
 .hero p.lead{margin-top:22px;font-size:1.15rem;color:var(--muted);max-width:52ch}
 .hero .btn-row{margin-top:30px}
 .hero-meta{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px 22px;color:var(--muted);font-size:.9rem;font-weight:600}
